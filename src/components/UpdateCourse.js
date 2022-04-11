@@ -29,7 +29,7 @@ export default class UpdateCourse extends Component {
 
      //getData makes an axios call to the server and retrieves the data by passing in the courseId from state.
      getData = async () => {
-        await axios.get(`http://localhost:5000/api/courses/${this.state.courseId}`)
+        await axios.get(`https://course-catalog-api-nh.herokuapp.com/api/courses/${this.state.courseId}`)
         //The response from axios request is saved into the state, pushed into the array, and then the array is returned.
         .then(response => {
             const course = response.data;

@@ -27,7 +27,7 @@ const DeleteCourse = () => {
         
         //getCourseData pulls in the most up-to-date information from the server for the course.  It is called in the useEffect hook below.
         const getCourseData = () => {
-            axios.get(`http://localhost:5000/api/courses/${id}`)
+            axios.get(`https://course-catalog-api-nh.herokuapp.com/api/courses/${id}`)
             //The response from axios request is saved into the state, pushed into the array, and then the array is returned.
             .then(response => setCourse(response.data))  
             .catch(error => {

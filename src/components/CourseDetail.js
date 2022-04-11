@@ -38,7 +38,7 @@ const CourseDetail = (props) => {
     useEffect(() => {
     //`http://localhost:5000/api/courses/${id}` pulls in the course id from the URL and uses it to pull the course information from the server.
         const getData = () => {
-            axios.get(`http://localhost:5000/api/courses/${id}`)
+            axios.get(`https://course-catalog-api-nh.herokuapp.com/api/courses/${id}`)
             //The response from axios request is saved into the state, pushed into the array, and then the array is returned.
             .then(response => setCourse(response.data))
                 .catch(error => {

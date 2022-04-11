@@ -12,7 +12,7 @@ const Courses = () => {
     const history = useHistory();
     
     const getCourses = async () => {
-        await axios.get('http://localhost:5000/api/courses')
+        await axios.get('https://course-catalog-api-nh.herokuapp.com/api/courses')
         //The response from axios request is saved into the state, pushed into the array, and then the array is returned. 
         .then(response => setCourses(response.data))
             .catch(error => {
